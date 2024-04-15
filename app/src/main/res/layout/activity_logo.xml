@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/skyblue"
+    android:background="@color/sky_blue"
     tools:context=".LogoActivity">
 
     <ImageView
-        android:id="@+id/logoicon"
+        android:id="@+id/logo_icon"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginTop="356dp"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoicon" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_icon" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MyChatApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/skyblue</item>
-        <item name="colorPrimaryVariant">@color/skyblue</item>\
+        <item name="colorPrimary">@color/sky_blue</item>
+        <item name="colorPrimaryVariant">@color/sky_blue</item>\
         <item name="colorOnPrimary">@color/white</item>
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="android:windowBackground">@color/white</item>
