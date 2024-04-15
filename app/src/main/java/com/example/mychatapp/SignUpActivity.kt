@@ -23,20 +23,25 @@ class SignUpActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         binding.btnSignUp.setOnClickListener {
+            val name = binding.name.text.toString()
             val gmail = binding.gmail.text.toString()
             val password = binding.password.text.toString()
-            signUp(gmail, password)
+            signUp(name, gmail, password)
         }
     }
-    private fun signUp(gmail:String, password:String){
+    private fun signUp(name:String, gmail:String, password:String){
         auth.createUserWithEmailAndPassword(gmail, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    addUserToDatabase(name, gmail, auth.currentUser?.uid!!)
                     startActivity(Intent(this, MainActivity::class.java))
                         finish()
                 } else {
                     Toast.makeText(this, "account create failed", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+    private fun addUserToDatabase(name:String, gmail:String, uid:String){
+
     }
 }
