@@ -12,4 +12,5 @@
     <string name="menu_sign_up">sign up</string>
     <string name="sent_message">sent message</string>
     <string name="receive_message">receive message</string>
+    <string name="type_a_message">type a message</string>
 </resources>
