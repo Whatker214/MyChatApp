@@ -13,6 +13,8 @@ class LogoActivity : AppCompatActivity() {
         binding = ActivityLogoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         Handler().postDelayed({
             startActivity(Intent(this, SignInActivity::class.java))
             finish()

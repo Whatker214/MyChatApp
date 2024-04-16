@@ -5,14 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.mychatapp.Model.User
 import com.example.mychatapp.databinding.ActivitySignInBinding
 import com.example.mychatapp.databinding.ActivitySignUpBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var db: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -42,6 +46,8 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
     private fun addUserToDatabase(name:String, gmail:String, uid:String){
+        db = FirebaseDatabase.getInstance().getReference()
 
+        db.child("user").child(uid).setValue(User(name, gmail, uid))
     }
 }
