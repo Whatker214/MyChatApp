@@ -42,5 +42,12 @@ class SignInActivity : AppCompatActivity() {
                 }
             }
     }
-
+    //如果先前是登入狀態的話，則跳到主畫面
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser != null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
 }
