@@ -10,4 +10,6 @@
     <string name="name">Name</string>
     <string name="user_name">user_name</string>
     <string name="menu_sign_up">sign up</string>
+    <string name="sent_message">sent message</string>
+    <string name="receive_message">receive message</string>
 </resources>
