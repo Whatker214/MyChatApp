@@ -2,15 +2,23 @@ package com.example.mychatapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Adapter
 import android.widget.Toast
+import com.example.mychatapp.Model.ChatGPT_message
 import com.example.mychatapp.databinding.ActivityChatGptactivityBinding
 
 class ChatGPTActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatGptactivityBinding
+    private lateinit var messageList: ArrayList<ChatGPT_message>
+    private lateinit var adapter: Adapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityChatGptactivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        messageList = ArrayList()
+
+        
 
 
         binding.sentQuestionIcon.setOnClickListener {
