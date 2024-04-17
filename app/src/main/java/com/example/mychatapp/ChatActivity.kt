@@ -82,16 +82,4 @@ class ChatActivity : AppCompatActivity() {
         }
 
     }
-
-    private fun callAPI(question: String){
-        try {
-            jsonBody.put("model", "gpt-3.5-turbo-instruct")
-            jsonBody.put("prompt", "Say this is a test")
-            jsonBody.put("max_tokens", 7)
-            jsonBody.put("temperature", 0)
-        }catch (e:Exception){
-           e.printStackTrace()
-        }
-
-    }
 }
