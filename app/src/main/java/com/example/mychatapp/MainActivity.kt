@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = "Chats"
+
         auth = FirebaseAuth.getInstance()
 
         db = FirebaseDatabase.getInstance().getReference()
@@ -46,7 +48,6 @@ class MainActivity : AppCompatActivity() {
 
         db.child("user").addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 userList.clear()
                 for (postSnapshot in snapshot.children){
                     val currentUser = postSnapshot.getValue(User::class.java)
@@ -63,6 +64,10 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        binding.chatgptIcon.setOnClickListener {
+            startActivity(Intent(this, ChatGPTActivity::class.java))
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

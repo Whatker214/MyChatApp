@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mychatapp.CahtActivity
+import com.example.mychatapp.ChatActivity
 import com.example.mychatapp.Model.User
 import com.example.mychatapp.R
 
@@ -32,7 +32,7 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>) : Recycle
         holder.textName.text = currentUser.name
 
         holder.itemView.setOnClickListener{
-            Intent(context, CahtActivity::class.java).apply {
+            Intent(context, ChatActivity::class.java).apply {
                 putExtra("name", currentUser.name)
                 putExtra("uid", currentUser.uid)
                 context.startActivity(this)

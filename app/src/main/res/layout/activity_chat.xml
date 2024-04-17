@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CahtActivity">
+    tools:context=".ChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@id/linearlayout"
         android:layout_alignParentTop="true"/>
 
@@ -17,18 +17,17 @@
         android:id="@+id/linearlayout"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:weightSum="100"
         android:orientation="horizontal"
-        android:background="@color/sky_blue">
+        android:background="@color/green">
         <EditText
             android:id="@+id/messagebox"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="38dp"
             android:layout_weight="90"
-            android:hint="@string/type_a_message"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="6dp"
             android:paddingStart="15dp"
             android:textSize="22sp"
             android:background="@drawable/message_box"/>
@@ -38,7 +37,6 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="10"
-            android:layout_marginTop="5dp"
             app:srcCompat="@android:drawable/ic_menu_send" />
     </LinearLayout>
 </RelativeLayout>
